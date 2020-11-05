@@ -11,19 +11,11 @@
             title: 'Hello',
             svgIcon: '<circle cx="12" cy="12" r="9" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2"/>',
             onClick: () => {
-              miro.board.widgets.create({
-                "type": "sticker",
-                "text": "Hello World!"
-              })
-              miro.board.widgets.create({
-                type: "sticker",
-                text: "TEST #2",
-                metadata: {
-                    "3074457350471107053": {
-                        data: "test data #2",
-                    },
-                }
-              })
+                miro.showNotification("Clicking icon");
+                miro.authorize({
+                    response_type: 'token',
+                    scope: 'board:read, board:write'
+                });
             }
           }
         }
