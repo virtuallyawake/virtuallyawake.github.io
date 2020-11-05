@@ -5,6 +5,8 @@
     <script type="text/javascript">
     miro.onReady(() => {
       miro.initialize({
+        miro.board.ui.openModal('custom-view.html');
+          
         extensionPoints: {
           bottomBar: {
             title: 'Hello',
@@ -15,14 +17,14 @@
                 "text": "Hello World!"
               })
               miro.board.widgets.create({
-    type: "sticker",
-    text: "TEST #2",
-    metadata: {
-        "3074457350471107053": {
-            data: "test data #2",
-        },
-    }
-})
+                type: "sticker",
+                text: "TEST #2",
+                metadata: {
+                    "3074457350471107053": {
+                        data: "test data #2",
+                    },
+                }
+              })
             }
           }
         }
