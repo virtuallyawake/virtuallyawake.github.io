@@ -12,10 +12,6 @@
             svgIcon: '<circle cx="12" cy="12" r="9" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2"/>',
             onClick: () => {
                 miro.showNotification("Clicking icon");
-                miro.authorize({
-                    response_type: 'token',
-                    scope: 'board:read board:write'
-                });
                 const clid = miro.getClientId();
                 console.log(clid);
             }
