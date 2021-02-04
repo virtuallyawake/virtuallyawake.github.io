@@ -14,6 +14,7 @@
                 miro.showNotification("Clicking icon");
                 const clid = miro.getClientId();
                 console.log(clid);
+                await miro.authorize({response_type: 'token'});
             }
           }
         }
